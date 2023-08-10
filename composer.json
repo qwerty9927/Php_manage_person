@@ -1,0 +1,21 @@
+{
+    "name": "acer/task_9-8",
+    "require": {
+        "monolog/monolog": "^2.9",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "scripts": {
+        "dev": "php -S localhost:8000 -t src/"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acer\\Task98\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Qwerty9927",
+            "email": "tanvo9927@gmail.com"
+        }
+    ]
+}
