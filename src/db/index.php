@@ -14,7 +14,8 @@ class Connection
     $hostname = $_ENV["HOST_DB"];
     $username = $_ENV["USERNAME_DB"];
     $password = $_ENV["PASSWORD_DB"];
-    $uri = "mysql:host=$hostname;dbname=obs_db";
+    $db = "mp_db";
+    $uri = "mysql:host=$hostname;dbname=$db";
     try {
       self::$conn = new PDO($uri, $username, $password);
       echo ("Connected successfully");
@@ -24,7 +25,7 @@ class Connection
     }
   }
 
-  static function getInstance()
+  static function getInstance() : PDO
   {
     if (self::$conn) {
       return self::$conn;
